@@ -1,0 +1,12 @@
+{
+  	"name": "nw-demo",
+  	"version": "0.0.1",
+  	"main": "index.html",
+  	"dependencies": {
+  		"serialport": "*"
+  	},
+  	"scripts": {
+  		"postinstall": "cd node_modules/serialport && node-pre-gyp rebuild --runtime=node-webkit --target=0.12.3"
+  	}
+}
+
