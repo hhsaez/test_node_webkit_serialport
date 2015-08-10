@@ -15,3 +15,11 @@ Running
 
 /Applications/nwjs.app/Contents/MacOS/nwjs .
 
+Building
+========
+
+OSX
+---
+
+node_modules/nw-builder/bin/nwbuild . -o release -p osx64
+

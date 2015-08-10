@@ -3,6 +3,7 @@
   	<head>
 	    <title>Hello World!</title>
   	</head>
+  	<script src="./js/jquery-1.11.3.min.js"></script>
   	<script type="text/javascript">
 		var serialport = require("serialport");
 		var SerialPort = serialport.SerialPort;
@@ -11,14 +12,12 @@
 
 		serialport.list(function (err, ports) {
 		  	ports.forEach(function(port) {
-		    	console.log("COM Name: ", port.comName);
-		    	console.log("PNP ID: ", port.pnpId);
-		    	console.log("Manufacturer: ", port.manufacturer);
+		  		$('#output').append( '<div>COM Name: ' + port.comName + '</div>' );
 		  	});
 		});
   	</script>
   	<body>
-    	<h1>Hello World!</h1>
-    	We are using node.js <script>document.write(process.version)</script>.
+    	<h1>Connected serial devices:</h1>
+    	<div id="output"></div>
   	</body>
 </html>
