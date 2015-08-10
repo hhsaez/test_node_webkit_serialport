@@ -6,7 +6,7 @@
   		"serialport": "*"
   	},
   	"scripts": {
-  		"postinstall": "cd node_modules/serialport && node-pre-gyp rebuild --runtime=node-webkit --target=0.12.3"
+  		"postinstall": "cd node_modules && cd serialport && node-pre-gyp rebuild --runtime=node-webkit --target=0.12.3"
   	}
 }
 
