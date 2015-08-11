@@ -3,13 +3,14 @@
   	"version": "0.0.1",
   	"main": "index.html",
   	"dependencies": {
-        "serialport": "*"
+        "serialport": "*",
+        "async": "*"
   	},
     "devDependencies": {
-      "nw-builder": "^2.0.2"
+        "nw-builder": "^2.0.2"
     },
   	"scripts": {
-    	 "postinstall": "cd node_modules && cd serialport && node-pre-gyp rebuild --runtime=node-webkit --target=0.12.3"
+        "postinstall": "sh postinstall.sh"
   	}
 }
 
